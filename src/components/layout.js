@@ -7,25 +7,25 @@ import { Link } from 'gatsby'
 import "../assets/style.css"
 
 const Layout = ({ children }) => (
-
-  <Container>
-    <Box mb={10} mt={20}>
+  <>
+    <Box mb={10}>
       <Header />
     </Box>
     <Menu />
 
-    <Box mb={100}>{children}</Box>
-    <footer>
-      <Text mb={40}>
-        © {new Date().getFullYear()}, Built with
+    <Container mt={300}>
+      <Box mb={100}>{children}</Box>
+      <footer>
+        <Text mb={40}>
+          © {new Date().getFullYear()}, Built with
           {` `}
-        <Link href="https://www.gatsbyjs.org">Gatsby</Link>
+          <Link href="https://www.gatsbyjs.org">Gatsby</Link>
 
-      </Text>
-    </footer>
-  </Container>
+        </Text>
+      </footer>
+    </Container>
 
-
+  </>
 )
 
 export default Layout

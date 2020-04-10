@@ -3,50 +3,48 @@ import { graphql, Link, navigate } from "gatsby"
 import Img from "gatsby-image"
 import ReactPaginate from "react-paginate"
 
-import { Stack, Box, Heading, Text, Grid, Button } from "@chakra-ui/core"
+import { Box, Heading, Text, Grid, Button } from "theme-ui"
 
 import Layout from "../components/layout"
 import { normalizePath } from "../utils/get-url-path"
 
 export default ({ data, pageContext }) => (
   <Layout>
-    <Stack spacing={5}>
-      {data.allWpPost.nodes.map(page => (
-        <Box key={page.link}>
-          <Link to={normalizePath(page.uri)}>
-            <Box p={5} shadow="md" borderWidth="1px">
-              <Grid templateColumns="1fr 2fr" gap={6}>
-                <Box>
-                  {!!page.featuredImage &&
-                    !!page.featuredImage.remoteFile &&
-                    !!page.featuredImage.remoteFile.childImageSharp && (
-                      <Img
-                        fluid={
-                          page.featuredImage.remoteFile.childImageSharp.fluid
-                        }
-                      />
-                    )}
-                </Box>
-                <Box>
-                  <Heading as="h2" size="md">
-                    {page.title}
-                  </Heading>
-                  {!!page.author && !!page.author.name && (
-                    <Heading as="h3" size="sm">
-                      Author: {page.author.name}
-                    </Heading>
+    {data.allWpPost.nodes.map(page => (
+      <Box key={page.link}>
+        <Link to={normalizePath(page.uri)}>
+          <Box p={5} shadow="md" borderWidth="1px">
+            <Grid templateColumns="1fr 2fr" gap={6}>
+              <Box>
+                {!!page.featuredImage &&
+                  !!page.featuredImage.remoteFile &&
+                  !!page.featuredImage.remoteFile.childImageSharp && (
+                    <Img
+                      fluid={
+                        page.featuredImage.remoteFile.childImageSharp.fluid
+                      }
+                    />
                   )}
+              </Box>
+              <Box>
+                <Heading as="h2" size="md">
+                  {page.title}
+                </Heading>
+                {!!page.author && !!page.author.name && (
+                  <Heading as="h3" size="sm">
+                    Author: {page.author.name}
+                  </Heading>
+                )}
 
-                  <Box>
-                    <Text dangerouslySetInnerHTML={{ __html: page.excerpt }} />
-                  </Box>
+                <Box>
+                  <Text dangerouslySetInnerHTML={{ __html: page.excerpt }} />
                 </Box>
-              </Grid>
-            </Box>
-          </Link>
-        </Box>
-      ))}
-    </Stack>
+              </Box>
+            </Grid>
+          </Box>
+        </Link>
+      </Box>
+    ))}
 
     {pageContext && pageContext.totalPages > 3 && (
       <Box mt={10}>

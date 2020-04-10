@@ -10,6 +10,7 @@ require('dotenv').config({
 module.exports = {
   plugins: [
     'gatsby-plugin-sharp',
+    'gatsby-plugin-theme-ui',
     {
       resolve: 'gatsby-source-filesystem',
       options: {
@@ -76,7 +77,6 @@ module.exports = {
         },
       },
     },
-    'gatsby-plugin-chakra-ui',
     'gatsby-transformer-sharp',
     {
       resolve: 'gatsby-plugin-react-svg',

@@ -1,5 +1,5 @@
 import React from 'react'
-import { Heading, Box } from '@chakra-ui/core';
+import { Heading, Box } from 'theme-ui';
 import Layout from '../components/layout';
 
 export default () => (

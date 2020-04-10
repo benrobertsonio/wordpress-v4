@@ -2,7 +2,7 @@ import React from "react"
 
 import { Link } from "gatsby"
 import urlToPath from "gatsby-source-wordpress-experimental/utils/url-to-path"
-import { Box, Heading } from "@chakra-ui/core"
+import { Box, Heading } from "theme-ui"
 import Img from "gatsby-image"
 import Layout from "../../components/layout"
 
@@ -12,7 +12,7 @@ function BlogPost({ data }) {
 
   return (
     <Layout>
-      <Heading as="h1" size="xl" mb={5}>
+      <Heading as="h1" size="xl" mb={4} mt={5}>
         {title}
       </Heading>
 

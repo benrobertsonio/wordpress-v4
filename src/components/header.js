@@ -1,5 +1,5 @@
 import React from "react"
-import { Heading, Box, Grid } from "@chakra-ui/core"
+import { Heading } from "theme-ui"
 import { Link } from "gatsby"
 
 export default () => (

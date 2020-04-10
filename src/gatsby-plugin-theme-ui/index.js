@@ -6,6 +6,6 @@ export default {
     ...theme.styles
   },
   sizes: {
-    container: '70ch'
+    container: ['90%', '70ch']
   }
 }

@@ -8,7 +8,19 @@ require('dotenv').config({
 });
 
 module.exports = {
+  siteMetadata: {
+    title: 'Ruth Robertson',
+    titleTemplate: '%s | Ruth Robertson',
+    description:
+      'description',
+    author: 'Ruth Robertson',
+    image: '',
+    siteUrl: 'https://ruth.robertson.is',
+    siteLanguage: 'en-US',
+    headline: '',
+  },
   plugins: [
+    'gatsby-plugin-react-helmet',
     'gatsby-plugin-sharp',
     'gatsby-plugin-theme-ui',
     {

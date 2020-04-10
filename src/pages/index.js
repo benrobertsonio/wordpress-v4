@@ -3,11 +3,13 @@ import Layout from '../components/layout'
 import { Box, Heading } from 'theme-ui'
 import { graphql, Link } from "gatsby"
 import urlToPath from "gatsby-source-wordpress-experimental/utils/url-to-path"
+import SEO from '../components/seo'
 
 export default function Home({ data }) {
   return (
     <Layout>
       <Box mt="5">
+        <SEO title="Home" />
 
         {data.allWpPost.nodes.map(({ title, excerpt, link }) => (
           <Box mb="4">

@@ -28,7 +28,7 @@
     "gatsby-source-filesystem": "^2.2.2",
     "gatsby-source-wordpress-experimental": "0.0.28",
     "gatsby-transformer-sharp": "2.4.4",
-    "parse-path": "^4.0.1",
+    "parse-path": "^5.0.0",
     "react": "^16.13.1",
     "react-dom": "^16.13.1",
     "react-helmet": "^6.0.0",
